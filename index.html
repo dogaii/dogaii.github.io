@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Bootstrap 5 Web Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background: linear-gradient(to bottom, #222, #444);
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #333, #555);
+        }
+
+        .section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section:nth-child(odd) {
+            background: linear-gradient(to bottom right, #ff5733, #ff7965);
+            animation: fadeIn 2s;
+        }
+
+        .section:nth-child(even) {
+            background: linear-gradient(to bottom right, #33c1ff, #55d4ff);
+            animation: zoomIn 2s;
+        }
+
+        .section img {
+            max-width: 60%;
+            height: auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s;
+        }
+
+        .section img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: 15px;
+            animation: bounceIn 1.5s;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-15px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        #gallery-9 {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        #gallery-9 img {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+
+        #gallery-9 p {
+            margin: 0;
+            line-height: 1.5;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: linear-gradient(to right, #333, #555);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introduction">Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#weather">Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#spotify">Spotify</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <section id="introduction" class="section">
+        <h2>EFFECT OF WEATHER IN LISTENING ACTIVITY</h2>
+        <p>Doğa İzci 32528</p>
+    </section>
+
+    <section id="hypothesis" class="section">
+        <h2>My Hypothesis</h2>
+        <p>My music listening duration and frequency vary according to daily weather conditions.</p>
+    </section>
+
+    <section id="weather" class="section">
+        <img src="src/weather.jpg" alt="Weather Image">
+    </section>
+
+    <section id="gallery" class="section">
+        <img src="src/1.jpg" alt="Gallery Image 1">
+        <p>This bar chart represents the average monthly temperatures (°C) over one year, providing an overview of
+            seasonal changes. I began the project by analyzing one year of weather data, which I fetched using
+            historical weather APIs. This initial step helped establish the temperature patterns across seasons, forming
+            a basis for comparing them with my Spotify listening habits.</p>
+    </section>
+
+    <section id="spotify" class="section">
+        <img src="src/spotify.png" alt="Spotify Image">
+    </section>
+
+    <section id="gallery-2" class="section">
+        <img src="src/2.jpg" alt="Gallery Image 2">
+        <p>Playtime gradually increases over the year, peaking in November and December. A noticeable dip occurs in
+            September, potentially reflecting changes in routine, such as a return to work or school.</p>
+    </section>
+
+    <section id="gallery-3" class="section">
+        <img src="src/3.jpg" alt="Gallery Image 3">
+        <p>A general upward trend can be observed, suggesting increased listening activity over the year. Peaks in
+            playback duration might align with specific events or personal routines, while dips could indicate less
+            activity during certain periods.</p>
+    </section>
+
+    <section id="gallery-4" class="section">
+        <img src="src/4.jpg" alt="Gallery Image 4">
+        <p>This boxplot visualizes the distribution of daily playtime (hours) across months. The x-axis represents
+            months, and the y-axis indicates daily playtime. Boxes represent interquartile ranges, while the whiskers
+            and outliers show variability. Playtime exhibits seasonal trends, with higher activity from September to
+            December. June shows the highest variability, possibly due to varying routines like vacations or holidays.
+            The overall median playtime increases slightly as the year progresses.</p>
+    </section>
+
+    <section id="gallery-5" class="section">
+        <img src="src/5.jpg" alt="Gallery Image 5">
+        <p>This heatmap represents average playtime (in hours) for each month. The color intensity ranges from light to
+            dark, with darker shades indicating higher playtime. Peak listening activity is visible in the later months
+            of the year (October to December). Mid-year months (June to August) also show increased playtime compared to
+            earlier months.</p>
+    </section>
+
+    <section id="gallery-6" class="section">
+        <img src="src/6.jpg" alt="Gallery Image 6">
+        <p>The plot uses varying shades of blue to indicate the density of data points: Darker Areas: Higher
+            concentration of data points. Lighter Areas: Lower concentration of data points. At very low temperatures
+            (below 5°C) and very high temperatures (above 25°C), the density fades, indicating less playback duration on
+            those days. This aligns with the observation that extreme weather may reduce my music listening, possibly
+            due to changes in activity levels or comfort.</p>
+    </section>
+
+    <section id="gallery-7" class="section">
+        <img src="src/7.jpg" alt="Gallery Image 7">
+        <p>A slight positive trend can be observed: as temperature increases, average playtime also tends to rise.
+            Sunny and Hot conditions dominate higher temperature ranges, while Rainy and Cold conditions cluster in
+            lower temperature ranges. The diversity of weather conditions provides a nuanced view of how listening
+            habits adapt to different temperatures.</p>
+    </section>
+
+    <section id="gallery-8" class="section">
+        <img src="src/8.jpg" alt="Gallery Image 8">
+        <p>The hexagons represent the density of data points: Color Gradient: The darker (red) hexagons indicate areas
+            with higher concentrations of data points (higher point density), while lighter hexagons (blue) represent
+            lower density. Used the hexbin function in Matplotlib to create a hexagonal binning plot. The color bar on
+            the right represents the point density within each hexagon. High Density Around Mild Temperatures: The
+            darkest (red) areas occur around temperatures between 10°C and 20°C, with playtime between 30–50 hours.
+            This suggests that I listen to the most music during mild weather conditions. Reduced Playtime at Extreme
+            Temperatures: Fewer data points (lighter hexagons) are observed at very low (< 5°C) or very high (> 25°C)
+            temperatures, indicating that I listen to less music in extreme weather.</p>
+    </section>
+
+    <section id="gallery-9" class="section" style="display: flex;">
+        <img src="src/9.jpg" alt="Gallery Image 9">
+        <div>
+            <p>Merged my Spotify playback data with historical weather conditions based on the dates of my listening
+                sessions. Grouped the data by weather conditions and summed up the playback duration for each. Plotted a
+                bar chart using tools like Matplotlib or Seaborn to clearly show playback variations.</p>
+            <p>Aim of the Graph: The goal is to analyze how my music listening habits vary under different weather
+                conditions. This helps me understand patterns in my music consumption and how external factors, like
+                weather, influence my listening behavior.</p>
+            <p>Sunny Days: I tend to listen to the most music during sunny weather. This suggests that I am more active
+                or in a better mood on sunny days, leading to longer playback durations.</p>
+        </div>
+    </section>
+
+    <section id="conclusion" class="section">
+        <h2>Conclusion</h2>
+        <p>Through the analysis, I found a clear relationship between weather patterns and my music listening habits. Specifically, my listening activity showed noticeable variations across different weather conditions, supporting the hypothesis that external environmental factors influence my music preferences and behaviors. These findings validate the initial assumption and demonstrate the impact of weather on personal music activities.</p>
+    </section>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
